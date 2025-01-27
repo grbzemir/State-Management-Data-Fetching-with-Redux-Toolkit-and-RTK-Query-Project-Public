@@ -22,7 +22,10 @@ const AddNewProduct = () => {
                 id: 1,
                 title: "Amazing T-Shirt",
                 description: "This is an amazing T-Shirt",
+
             };
+
+
 
             await addNewProduct(newProductData).unwrap();
 

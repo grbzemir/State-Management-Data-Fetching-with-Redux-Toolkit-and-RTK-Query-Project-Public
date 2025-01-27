@@ -6,7 +6,7 @@ import { setupListeners } from '@reduxjs/toolkit/query';
 export const store = configureStore({
     reducer: {
         counter: counterReducer,
-        [productsApi.reducerPath]: productsApi.reducer,
+        [productsApi.reducerPath]: productsApi.reducer, //Reducer'ı tanımlar
     },
 
     // Middleware, API istekleri yapılırken gerekli işlemleri (önbellekleme, yenileme vb.) yönetir.
