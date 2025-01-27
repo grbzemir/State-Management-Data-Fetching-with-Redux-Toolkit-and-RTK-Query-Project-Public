@@ -22,7 +22,9 @@ const AddNewProduct = () => {
                 id: 1,
                 title: "Amazing T-Shirt",
                 description: "This is an amazing T-Shirt",
-            }
+            };
+
+            await addNewProduct(newProductData).unwrap();
 
         } catch (err) {
             console.log("Error adding new product", err);
@@ -31,6 +33,11 @@ const AddNewProduct = () => {
     }
     return (
         <div>
+
+            <h1>{data?.id}</h1>
+            <h1>{data?.title}</h1>
+            <h1>{data?.description}</h1>
+
             <button onClick={handleAddProduct} disabled={isLoading}>Add New Product</button>
         </div>
     )

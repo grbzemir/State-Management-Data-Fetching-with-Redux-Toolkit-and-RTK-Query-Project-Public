@@ -6,6 +6,7 @@ import Counter from './components/Counter'
 import AllProducts from './components/AllProducts'
 import SpecificProduct from './components/SpecificProduct'
 import AddNewProduct from './components/AddNewProduct'
+import UpdateProduct from './components/UpdateProduct'
 
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
       {/* <Counter /> */}
       {/* <AllProducts /> */}
       {/* <SpecificProduct /> */}
-      <AddNewProduct />
+      {/* <AddNewProduct /> */}
+      <UpdateProduct />
     </>
   )
 }
