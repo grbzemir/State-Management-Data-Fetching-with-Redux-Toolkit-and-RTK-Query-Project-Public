@@ -27,7 +27,7 @@ const AddNewProduct = () => {
             await addNewProduct(newProductData).unwrap();
 
         } catch (err) {
-            console.log("Error adding new product", err);
+            console.error("Error adding new product", err);
         }
 
     }

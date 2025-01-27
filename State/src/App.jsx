@@ -7,6 +7,7 @@ import AllProducts from './components/AllProducts'
 import SpecificProduct from './components/SpecificProduct'
 import AddNewProduct from './components/AddNewProduct'
 import UpdateProduct from './components/UpdateProduct'
+import DeleteProduct from './components/DeleteProduct'
 
 
 function App() {
@@ -18,7 +19,8 @@ function App() {
       {/* <AllProducts /> */}
       {/* <SpecificProduct /> */}
       {/* <AddNewProduct /> */}
-      <UpdateProduct />
+      {/* <UpdateProduct productId={5} /> */}
+      <DeleteProduct productId={5} />
     </>
   )
 }

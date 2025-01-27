@@ -1,9 +1,10 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import { useUpdateProductMutation } from '../app/service/dummyData'
 
-const UpdateProduct = () => {
+const UpdateProduct = ({ productId }) => {
 
-    const [updatedProduct, { data, error, isLoading }] = useUpdateProductMutation();
+    const [updateProduct, { data, error, isLoading }] = useUpdateProductMutation();
     // console.log(res);
 
     if (isLoading) {
@@ -19,12 +20,16 @@ const UpdateProduct = () => {
         try {
 
             const updatedProductData = {
-                id: 1,
-                title: "Amazing T-Shirt",
-                description: "This is an amazing T-Shirt",
+
+                title: "Title Updated",
+
             };
 
-            await updatedProduct(updatedProductData).unwrap();
+            await updateProduct(
+                {
+                    id: productId,
+                    updatedProduct: updatedProductData,
+                });
 
         } catch (err) {
             console.log("Error adding new product", err);
@@ -33,11 +38,17 @@ const UpdateProduct = () => {
     }
     return (
 
-
         <div>
-            UpdateProduct
+
+            <h1>{data?.title}</h1>
+            <button onClick={handleUpdateProduct} disabled={isLoading}>Update Product</button>
         </div>
     )
 }
+UpdateProduct.propTypes = {
+    productId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+};
+
 
 export default UpdateProduct
+
