@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Counter from './components/Counter'
 import AllProducts from './components/AllProducts'
+import SpecificProduct from './components/SpecificProduct'
+import AddNewProduct from './components/AddNewProduct'
 
 
 function App() {
@@ -12,7 +14,9 @@ function App() {
   return (
     <>
       {/* <Counter /> */}
-      <AllProducts />
+      {/* <AllProducts /> */}
+      {/* <SpecificProduct /> */}
+      <AddNewProduct />
     </>
   )
 }
