@@ -5,7 +5,7 @@ import { useUpdateProductMutation } from '../app/service/dummyData'
 const UpdateProduct = ({ productId }) => {
 
     const [updateProduct, { data, error, isLoading }] = useUpdateProductMutation();
-    // console.log(res);
+    console.log(data);
 
     if (isLoading) {
         return <h1>Loading...</h1>

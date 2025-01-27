@@ -5,7 +5,7 @@ import { useDeleteProductMutation } from '../app/service/dummyData'
 const DeleteProduct = ({ productId }) => {
 
     const [deleteProduct, { data, error, isLoading }] = useDeleteProductMutation();
-    // console.log(res);
+    console.log(data);
 
     if (isLoading) {
 

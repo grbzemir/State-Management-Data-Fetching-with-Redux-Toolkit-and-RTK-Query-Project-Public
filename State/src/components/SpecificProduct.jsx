@@ -3,7 +3,6 @@ import { useGetProductByIdQuery } from '../app/service/dummyData'
 
 const SpecificProduct = () => {
     const { data, isError, isLoading } = useGetProductByIdQuery(10);
-
     console.log(data);
 
     if (isError) {

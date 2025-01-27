@@ -4,7 +4,7 @@ import { useAddNewProductMutation } from '../app/service/dummyData'
 const AddNewProduct = () => {
 
     const [addNewProduct, { data, error, isLoading }] = useAddNewProductMutation();
-    // console.log(res);
+    console.log(data);
 
     if (isLoading) {
         return <h1>Loading...</h1>
