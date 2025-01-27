@@ -6,9 +6,13 @@ export const productsApi = createApi({
     reducerPath: "products", //Api için kulanılcak isim
     baseQuery: fetchBaseQuery({ baseUrl: "https://dummyjson.com" }), //Tüm isteklerde kullanılacak temel URL'dir
     endpoints: (builder) => ({ //endpoint yapılcak işlemleri gösteriyor
-        getAllProducts: builder.query({
+        getAllProduct: builder.query({
             query: () => "/products",
             // query: bir get isteğini temsil eder
+        }),
+
+        getProductById: builder.query({
+            query: (id) => `/products/${id}`,
         }),
     }),
 });

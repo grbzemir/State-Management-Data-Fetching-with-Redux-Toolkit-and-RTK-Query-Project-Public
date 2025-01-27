@@ -4,6 +4,7 @@ import { useGetAllProductQuery } from '../app/service/dummyData'
 const AllProducts = () => {
 
     const { data, isError, isLoading } = useGetAllProductQuery();
+    console.log(data);
 
     if (isError) {
         return <h1>OOhNoooo we got an error</h1>
