@@ -7,6 +7,7 @@ import AddNewProduct from './components/AddNewProduct';
 import UpdateProduct from './components/UpdateProduct';
 import DeleteProduct from './components/DeleteProduct';
 
+//React Router Dom Entegrasyonu
 const App = () => {
   return (
     <Router>
